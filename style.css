@@ -955,6 +955,34 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+              .hero,
+    .services-section,
+    .features-section,
+    .process-section,
+    .testimonials-section,
+    .cta-section,
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-section {
+        padding: 80px 20px;
+    }
+
+    .logo-icon {
+        width: 170px;
+        height: auto;
+    }
+
+    .cta-nav {
+        padding: 10px 22px;
+        font-size: 1rem;
+    }
+
+    body {
+        overflow-x: hidden;
+    }       
             .nav-menu {
                 display: none;
             }
