@@ -20,40 +20,7 @@
         html{
             scroll-behavior: smooth;
         }
-
-        /* Floating Elements */
-        .floating-bubbles {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .bubble {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.3), rgba(16, 185, 129, 0.1));
-            border-radius: 50%;
-            animation: floatUp 8s infinite ease-in;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) scale(1);
-                opacity: 0;
-            }
-        }
+   
 
         /* Header */
         .header {
@@ -68,39 +35,37 @@
         }
 
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px 40px;
+            max-width: 1100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+      .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            animation: spin 3s infinite linear;
-        }
+.logo-icon {
+    width: 220px;
+    height: 120px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    overflow: hidden;
+}
 
-        @keyframes spin {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(180deg); }
-        }
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 
         .nav-menu {
             display: flex;
@@ -135,22 +100,25 @@
             width: 100%;
         }
 
-        .cta-nav {
-            padding: 12px 30px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+     .cta-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        .cta-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
-        }
-
+   .cta-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -295,34 +263,8 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
         }
 
-        .floating-card {
-            position: absolute;
-            background: #fff;
-            padding: 20px 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            animation: float 3s infinite ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .floating-card-1 {
-            top: 50px;
-            left: -50px;
-            animation-delay: 0s;
-        }
-
-        .floating-card-2 {
-            bottom: 80px;
-            right: -30px;
-            animation-delay: 1s;
-        }
+      
+        
 
         .card-icon {
             width: 50px;
@@ -457,9 +399,7 @@
         display: block;
     }
 
-    .about-floating-icon {
-        display: none;
-    }
+
 }
 
 
@@ -1027,9 +967,6 @@
                 order: -1;
             }
 
-            .floating-card {
-                display: none;
-            }
 
             .process-step,
             .process-step:nth-child(even) {
