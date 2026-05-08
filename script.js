@@ -1,18 +1,3 @@
-  // Create floating bubbles
-        function createBubbles() {
-            const container = document.getElementById('bubbles');
-            for (let i = 0; i < 15; i++) {
-                const bubble = document.createElement('div');
-                bubble.className = 'bubble';
-                bubble.style.left = Math.random() * 100 + '%';
-                bubble.style.animationDelay = Math.random() * 8 + 's';
-                bubble.style.width = (15 + Math.random() * 25) + 'px';
-                bubble.style.height = bubble.style.width;
-                container.appendChild(bubble);
-            }
-        }
-        createBubbles();
-
         // Smooth scrolling
         function scrollToSection(id) {
             const element = document.getElementById(id);
